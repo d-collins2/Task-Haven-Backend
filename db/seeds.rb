@@ -121,84 +121,84 @@ puts "tasks"
   Task.find_or_create_by(
     name: Faker::Lorem.word,
     list_id: l1[0].id,
-    descritption:Faker::Lorem.paragraph,
+    description:Faker::Lorem.paragraph,
     due_date: Faker::Date.forward(10),
     labels: colors.sample(5)[0]
   )
   Task.find_or_create_by(
     name: Faker::Lorem.word,
     list_id: l1[1].id,
-    descritption:Faker::Lorem.paragraph,
+    description:Faker::Lorem.paragraph,
     due_date: Faker::Date.forward(10),
     labels: colors.sample(5)[0]
   )
   Task.find_or_create_by(
     name: Faker::Lorem.word,
     list_id: l1[2].id,
-    descritption:Faker::Lorem.paragraph,
+    description:Faker::Lorem.paragraph,
     due_date: Faker::Date.forward(10),
     labels: colors.sample(5)[0]
   )
   Task.find_or_create_by(
     name: Faker::Lorem.word,
     list_id: l2[0].id,
-    descritption:Faker::Lorem.paragraph,
+    description:Faker::Lorem.paragraph,
     due_date: Faker::Date.forward(10),
     labels: colors.sample(5)[0]
   )
   Task.find_or_create_by(
     name: Faker::Lorem.word,
     list_id: l2[1].id,
-    descritption:Faker::Lorem.paragraph,
+    description:Faker::Lorem.paragraph,
     due_date: Faker::Date.forward(10),
     labels: colors.sample(5)[0]
   )
   Task.find_or_create_by(
     name: Faker::Lorem.word,
     list_id: l2[2].id,
-    descritption:Faker::Lorem.paragraph,
+    description:Faker::Lorem.paragraph,
     due_date: Faker::Date.forward(10),
     labels: colors.sample(5)[0]
   )
   Task.find_or_create_by(
     name: Faker::Lorem.word,
     list_id: l3[0].id,
-    descritption:Faker::Lorem.paragraph,
+    description:Faker::Lorem.paragraph,
     due_date: Faker::Date.forward(10),
     labels: colors.sample(5)[0]
   )
   Task.find_or_create_by(
     name: Faker::Lorem.word,
     list_id: l3[1].id,
-    descritption:Faker::Lorem.paragraph,
+    description:Faker::Lorem.paragraph,
     due_date: Faker::Date.forward(10),
     labels: colors.sample(5)[0]
   )
   Task.find_or_create_by(
     name: Faker::Lorem.word,
     list_id: l3[2].id,
-    descritption:Faker::Lorem.paragraph,
+    description:Faker::Lorem.paragraph,
     due_date: Faker::Date.forward(10),
     labels: colors.sample(5)[0]
   )
   Task.find_or_create_by(
     name: Faker::Lorem.word,
     list_id: l4[0].id,
-    descritption:Faker::Lorem.paragraph,
+    description:Faker::Lorem.paragraph,
     due_date: Faker::Date.forward(10),
     labels: colors.sample(5)[0]
   )
   Task.find_or_create_by(
     name: Faker::Lorem.word,
     list_id: l4[1].id,
-    descritption:Faker::Lorem.paragraph,
+    description:Faker::Lorem.paragraph,
     due_date: Faker::Date.forward(10),
     labels: colors.sample(5)[0]
   )
   Task.find_or_create_by(
     name: Faker::Lorem.word,
     list_id: l4[2].id,
-    descritption:Faker::Lorem.paragraph,
+    description:Faker::Lorem.paragraph,
     due_date: Faker::Date.forward(10),
     labels: colors.sample(5)[0]
   )

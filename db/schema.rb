@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2019_02_21_201615) do
   create_table "tasks", force: :cascade do |t|
     t.integer "list_id"
     t.string "name"
-    t.string "descritption"
+    t.string "description"
     t.string "comments"
     t.string "activity"
     t.string "due_date"

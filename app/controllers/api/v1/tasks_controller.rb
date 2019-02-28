@@ -11,8 +11,24 @@ class Api::V1::TasksController < ApplicationController
     render json: Task.create(task_params)
   end
 
+  def update
+    @task = Task.all.find(params[:id])
+    @task.update(task_params)
+    render json: @task
+  end
+
+  def destroy
+
+    @task = Task.find(params[:id])
+    @task.destroy
+  end
+
   private
   def task_params
     params.require(:task).permit(:name, :list_id)
+  end
+
+  def task_params
+    params.require(:task).permit(:name, :list_id, :due_date, :descritption)
   end
 end
