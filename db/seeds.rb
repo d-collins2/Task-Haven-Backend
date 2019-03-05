@@ -15,14 +15,14 @@ puts "users"
     username: Faker::Internet.username,
     email: Faker::Internet.free_email,
     password_digest: Faker::Internet.password(8, 10),
-    img_url: Faker::LoremPixel.image("100x100", 'people')
+    img_url: Faker::LoremPixel.image("150x150", 'people')
   )
 end
 puts "end"
 
 puts "teams"
 2.times do
-  Team.find_or_create_by(name: Faker::Lorem.word)
+  Team.find_or_create_by(name: Faker::Lorem.word, img_url: Faker::LoremPixel.image("150x150", 'people') )
 end
 puts "end"
 

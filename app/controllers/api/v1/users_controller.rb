@@ -16,21 +16,28 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def show
-  		@user = User.find(params[:id])
-  		if @user
-  			if current_user.id == @user.id
-  				render json: @user
-  			else
-  				render json: {errors: "WHOA! This ain't your page, bud!"}
-  			end
-  		else
-  			render json: {errors: "User not found!"}
-  		end
-  	end
+		@user = User.find(params[:id])
+		if @user
+			if current_user.id == @user.id
+				render json: @user
+			else
+				render json: {errors: "WHOA! This ain't your page, bud!"}
+			end
+		else
+			render json: {errors: "User not found!"}
+		end
+	end
+
+  def update
+    
+    @user = User.all.find(params[:id])
+    @user.update(user_params)
+    render json: @user
+  end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :first_name, :last_name, :email)
+    params.require(:user).permit(:username, :password, :first_name, :last_name, :email, :img_url)
   end
 end

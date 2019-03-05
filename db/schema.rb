@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(version: 2019_02_21_201615) do
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
+    t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
