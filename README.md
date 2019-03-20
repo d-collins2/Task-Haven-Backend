@@ -1,4 +1,4 @@
-# Trello: Back End
+# Trello - Back End
 
 This Rails app was deisgned to handle the database and API for my Trello clone. 
 
