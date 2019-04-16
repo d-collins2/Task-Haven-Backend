@@ -11,7 +11,7 @@ class Api::V1::UsersController < ApplicationController
       @token = encode_token(@user.id)
       render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
     else
-      render json: { error: 'failed to create user' }, status: :not_acceptable
+      render json: { error: 'Failed to create user' }, status: :not_acceptable
     end
   end
 
@@ -20,16 +20,14 @@ class Api::V1::UsersController < ApplicationController
 		if @user
 			if current_user.id == @user.id
 				render json: @user
-			else
-				render json: {errors: "WHOA! This ain't your page, bud!"}
 			end
 		else
-			render json: {errors: "User not found!"}
+			render json: { errors: "User not found!" }
 		end
 	end
 
   def update
-    
+
     @user = User.all.find(params[:id])
     @user.update(user_params)
     render json: @user

@@ -17,7 +17,7 @@ class Api::V1::AuthController < ApplicationController
 			if current_user
 				render json: current_user
 			else
-				render json: {errors: "WHOA! User not found!"}
+				render json: {errors: "User not found!"}
 			end
 	end
 
