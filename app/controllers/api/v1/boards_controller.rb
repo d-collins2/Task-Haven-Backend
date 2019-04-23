@@ -11,6 +11,11 @@ class Api::V1::BoardsController < ApplicationController
     render json: Board.create(board_params)
   end
 
+  def destroy
+    @board = Board.find(params[:id])
+    @board.destroy
+  end
+
   private
   def board_params
     params.require(:board).permit(:name, :team_id)

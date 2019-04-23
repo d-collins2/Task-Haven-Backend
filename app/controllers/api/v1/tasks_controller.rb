@@ -13,7 +13,7 @@ class Api::V1::TasksController < ApplicationController
 
   def update
     @task = Task.all.find(params[:id])
-    @task.update(update_params)
+    @task.update(task_params)
     render json: @task
   end
 
@@ -28,6 +28,6 @@ class Api::V1::TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:name, :list_id, :due_date, :descritption)
+    params.require(:task).permit(:name, :list_id, :due_date, :descritption, :labels)
   end
 end

@@ -35,7 +35,7 @@ class UserSerializer < ActiveModel::Serializer
         lists[board.id] = board.lists
         members["lists"] = lists
       end
-      members["team members"] = array
+      members["team_members"] = array
       members["boards"] = boards
 
       hash[team.id] =  members
