@@ -1,6 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :email, :password_digest, :boards, :first_name, :last_name,
-  :img_url, :teams_info, :comments, :activitys, :teams, :full_name
+  attributes :id, :username, :email, :password_digest, :boards, :first_name, :last_name, :teams_info, :teams, :full_name
 
   def teams
     object.teams
@@ -16,6 +15,11 @@ class UserSerializer < ActiveModel::Serializer
       team.boards.each{|board| boards << board}
     end
     boards
+  end
+
+  def lists
+    lists = []
+
   end
 
   def teams_info
@@ -35,7 +39,7 @@ class UserSerializer < ActiveModel::Serializer
         lists[board.id] = board.lists
         members["lists"] = lists
       end
-      members["team members"] = array
+      members["team_members"] = array
       members["boards"] = boards
 
       hash[team.id] =  members

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :activities
       resources :comment
 
+      patch '/move', to: 'tasks#move'
       post '/login', to: 'auth#create'
 
       get "/current_user", to: "auth#get_user_from_token"
