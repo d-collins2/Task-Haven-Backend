@@ -11,7 +11,7 @@ class Api::V1::TasksController < ApplicationController
     render json: Task.create(task_params)
   end
 
-  def update
+  def move
     @task = Task.all.find(params[:id])
     @task.update(task_params)
     render json: @task
@@ -20,6 +20,12 @@ class Api::V1::TasksController < ApplicationController
   def move
     @task = Task.all.find(params[:id])
     @task.update(update_params)
+    render json: @task
+  end
+
+  def update
+    @task = Task.all.find(params[:id])
+    @task.update(task_params)
     render json: @task
   end
 
@@ -34,6 +40,10 @@ class Api::V1::TasksController < ApplicationController
   end
 
   def task_params
+<<<<<<< HEAD
     params.require(:task).permit(:name, :list_id, :due_date, :descritption, )
+=======
+    params.require(:task).permit(:name, :list_id, :due_date, :descritption, :labels)
+>>>>>>> 6e35b34e6ba1650e1aead369ccb80021a97b31de
   end
 end

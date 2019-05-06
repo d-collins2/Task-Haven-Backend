@@ -3,6 +3,10 @@ class Api::V1::TeamsController < ApplicationController
     render json: Team.all
   end
 
+  def show
+    render json: Team.all.find(params[:id])
+  end
+
   def create
     @team = Team.new(name: params[:name])
     if @team.valid?
@@ -14,7 +18,8 @@ class Api::V1::TeamsController < ApplicationController
     render json: @team
   end
 
-  def show
-    render json: Team.all.find(params[:id])
+  def destroy
+    @team = Team.find(params[:id])
+    @team.destroy
   end
 end
